@@ -1,0 +1,38 @@
+# Dependencies
+/node_modules/
+
+# Generated build and packaging output
+/out/
+/dist/
+/release/
+/coverage/
+*.tsbuildinfo
+
+# Tool caches
+/.vite/
+/.cache/
+
+# Logs and runtime files
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.pid.lock
+
+# Local environment variables
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+.idea/

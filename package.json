@@ -1,0 +1,52 @@
+{
+  "name": "eye-rest",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "node scripts/run-electron-vite.mjs dev",
+    "build": "electron-vite build",
+    "preview": "node scripts/run-electron-vite.mjs preview",
+    "pack:win": "electron-vite build && electron-builder --win portable"
+  },
+  "dependencies": {
+    "vue": "^3.5.43"
+  },
+  "devDependencies": {
+    "@vicons/ionicons5": "^0.13.0",
+    "@vicons/utils": "^0.1.4",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "electron": "^44.7.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^6.0.0-beta.7",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "build": {
+    "appId": "local.eye.rest",
+    "productName": "Eye Rest",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "src/assets/icon.ico",
+        "to": "app-icon.ico"
+      }
+    ],
+    "win": {
+      "icon": "src/assets/icon.ico",
+      "target": [
+        "portable"
+      ]
+    }
+  }
+}
